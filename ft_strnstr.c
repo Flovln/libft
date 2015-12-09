@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 19:35:11 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/02 10:41:36 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/09 17:47:59 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	i = 0;
 	j = 0;
+	if (s2[k] == '\0')
+		return ((char *)s1);
 	while (s1[j] && i < n)
 	{
 		k = 0;
@@ -34,7 +36,5 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		i++;
 		j++;
 	}
-	if (s2[k] == '\0')
-		return ((char *)s1);
 	return (NULL);
 }

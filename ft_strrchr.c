@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 11:28:20 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/02 16:51:35 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/09 17:48:55 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ char	*ft_strrchr(const char *s, int c)
 		temp_s--;
 	if (*temp_s == (char)c)
 		return ((char *)temp_s);
-	return (NULL);
+	else
+		return (NULL);
 }
