@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 15:39:10 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/07 17:34:02 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/09 17:02:59 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnew(size_t size)
 {
-	char			*str;
+	char	*str;
 
 	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)

@@ -6,7 +6,7 @@
 #    By: fviolin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 17:41:56 by fviolin           #+#    #+#              #
-#    Updated: 2015/12/08 15:54:31 by fviolin          ###   ########.fr        #
+#    Updated: 2015/12/09 17:21:47 by fviolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ SRCS = ft_atoi.c\
 	ft_lstiter.c\
 	ft_lstdel.c\
 	ft_lstnew.c\
+	ft_lstmap.c\
 	ft_nbrlen.c\
 	ft_swap.c
 	

@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 10:59:45 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/02 10:50:14 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/09 16:50:55 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_strclr(char *s)
 {
-	unsigned char *s2;
+	int i;
 
-	s2 = (unsigned char *)s;
-	while (*s2)
+	i = 0;
+	while (s[i])
 	{
-		*s2 = '\0';
-		s2++;
+		s[i] = '\0';
+		i++;
 	}
 }
