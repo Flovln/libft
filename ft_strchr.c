@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 10:50:34 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/02 10:50:30 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/09 17:51:49 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c && *s != '\0')
+	char	*fd;
+
+	if (c == '\0')
+		return ((char *)s + ft_strlen(s));
+	while (*s)
+	{
+		if (*s == c)
+		{
+			fd = (char *)s;
+			return (fd);
+		}
 		s++;
-	if (*s == (char)c)
-		return ((char *)s);
+	}
 	return (NULL);
 }
