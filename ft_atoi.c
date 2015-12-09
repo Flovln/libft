@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:33:05 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/08 15:47:33 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/09 15:36:30 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ int		ft_atoi(const char *str)
 	int n;
 
 	i = 0;
-	n = 0;
-	if (!str)
-		return (0);
+	n = 1;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+	if (ft_strncmp(str, "-2147483648", 11) == 0)
+		return (-2147483648);
+	if (*str == '-' || *str == '+')
 	{
-		n = -1;
+		n = (*str == '-') ? -1 : 1;
 		str++;
 	}
 	while (*str && *str >= '0' && *str <= '9')
@@ -35,7 +33,5 @@ int		ft_atoi(const char *str)
 		i = 10 * i + (*str - '0');
 		str++;
 	}
-	if (n)
-		return (-i);
-	return (i);
+	return (n * i);
 }
