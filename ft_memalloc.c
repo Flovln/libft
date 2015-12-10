@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 15:03:26 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/02 15:45:33 by fviolin          ###   ########.fr       */
+/*   Updated: 2015/12/10 10:46:18 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memalloc(size_t size)
 	mem = (unsigned char *)malloc(sizeof(void) * size);
 	if (!mem)
 		return (NULL);
-	while (size > 0)
+	while (size)
 	{
 		mem[i] = 0;
 		i++;
