@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   main_ft_strlcat.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 18:26:36 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/10 10:44:57 by fviolin          ###   ########.fr       */
+/*   Created: 2015/11/26 15:47:43 by fviolin           #+#    #+#             */
+/*   Updated: 2015/11/28 13:32:58 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
-{
-	size_t	i;
-	size_t	j;
-	size_t len;
+ // (char*)s --> transforme (cast) le "const char *s" de la variable de depart en char*, sino    n la compilation fail car seul, "*s" est un char et non un const char, donc ne match pas le prototype.
 
-	i = 0;
-	j = 0;
-	len = 0;
-	if (!s)
-		return (NULL);
-	while (ft_isspace(s[i]) == 1)
-		i++;
-	while (s[j])
-	{
-		if (ft_isspace(s[j]) == 0)
-		{
-			j++;
-			len = j;
-		}
-		else
-			j++;
-	}
-	if (len == 0)
-		return (ft_strdup(""));
-	return (ft_strsub(s, i, len - i));
+int     main()
+{
+	printf("%zu\n", ft_strlcat("Hello", "World", 5));
+	printf("%zu\n", strlcat("Hello", "World", 5));
+	return (0);
 }

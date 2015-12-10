@@ -1,41 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   main_ft_strdup.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 18:26:36 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/10 10:44:57 by fviolin          ###   ########.fr       */
+/*   Created: 2015/11/24 11:44:04 by fviolin           #+#    #+#             */
+/*   Updated: 2015/11/24 11:46:05 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strtrim(char const *s)
+int		main(int ac, char **av)
 {
-	size_t	i;
-	size_t	j;
-	size_t len;
-
-	i = 0;
-	j = 0;
-	len = 0;
-	if (!s)
-		return (NULL);
-	while (ft_isspace(s[i]) == 1)
-		i++;
-	while (s[j])
-	{
-		if (ft_isspace(s[j]) == 0)
-		{
-			j++;
-			len = j;
-		}
-		else
-			j++;
-	}
-	if (len == 0)
-		return (ft_strdup(""));
-	return (ft_strsub(s, i, len - i));
+	printf("%s", ft_strdup(av[1]));
+	printf("\n");
+	printf("\s", strdup(av[1])); //Pour comparer avec la fonction d'origine
+	printf("\n");
+	return (0);
 }

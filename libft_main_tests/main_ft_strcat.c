@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   main_ft_strcat.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 18:26:36 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/10 10:44:57 by fviolin          ###   ########.fr       */
+/*   Created: 2015/11/24 17:06:00 by fviolin           #+#    #+#             */
+/*   Updated: 2015/11/30 19:02:31 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_strtrim(char const *s)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	size_t	i;
-	size_t	j;
-	size_t len;
+	int i;
+	int	j;
 
 	i = 0;
 	j = 0;
-	len = 0;
-	if (!s)
-		return (NULL);
-	while (ft_isspace(s[i]) == 1)
+	while (s1[i])
 		i++;
-	while (s[j])
+	while (s2[j])
 	{
-		if (ft_isspace(s[j]) == 0)
-		{
-			j++;
-			len = j;
-		}
-		else
-			j++;
+		s1[i] = s2[j];
+		i++;
+		j++;
 	}
-	if (len == 0)
-		return (ft_strdup(""));
-	return (ft_strsub(s, i, len - i));
+	s1[i] = '\0';
+	return (s1);
+}
+
+int		main(int ac, char **av)
+{
+	printf("%s\n", ft_strcat(av[1], av[2]));
+	printf("%s\n", strcat(av[1], av[2]));
+	return(0);
 }

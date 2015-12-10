@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   main_ft_memmove.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 18:26:36 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/10 10:44:57 by fviolin          ###   ########.fr       */
+/*   Created: 2015/11/28 13:30:06 by fviolin           #+#    #+#             */
+/*   Updated: 2015/11/30 10:12:48 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strtrim(char const *s)
+int     main()
 {
-	size_t	i;
-	size_t	j;
-	size_t len;
+	unsigned char dst[] = "HelloWorldHowAreYou";
+	unsigned char src[] = "HelloWorldppppppppp";
 
-	i = 0;
-	j = 0;
-	len = 0;
-	if (!s)
-		return (NULL);
-	while (ft_isspace(s[i]) == 1)
-		i++;
-	while (s[j])
-	{
-		if (ft_isspace(s[j]) == 0)
-		{
-			j++;
-			len = j;
-		}
-		else
-			j++;
-	}
-	if (len == 0)
-		return (ft_strdup(""));
-	return (ft_strsub(s, i, len - i));
+	printf("Avant memmove, dest = %s, src = %s\n\n", dst, src);
+	ft_memmove(dst, src, 19);
+	printf("Apres memmove, dest = %s, src = %s\n\n", dst, src);
+	memmove(dst, src, 19);
+	printf("Fonction d'origine, dest = %s, src = %s\n", dst, src);
 }
