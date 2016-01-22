@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 18:26:36 by fviolin           #+#    #+#             */
-/*   Updated: 2015/12/10 10:44:57 by fviolin          ###   ########.fr       */
+/*   Updated: 2016/01/13 11:54:43 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	j;
-	size_t len;
+	size_t	len;
 
 	i = 0;
 	j = 0;
