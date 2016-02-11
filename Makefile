@@ -6,7 +6,7 @@
 #    By: fviolin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 17:41:56 by fviolin           #+#    #+#              #
-#    Updated: 2015/12/09 17:21:47 by fviolin          ###   ########.fr        #
+#    Updated: 2016/02/11 16:40:37 by fviolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRCS = ft_atoi.c\
 	ft_strmapi.c\
 	ft_strsub.c\
 	ft_strjoin.c\
+	ft_strnjoin.c\
 	ft_strtrim.c\
 	ft_strsplit.c\
 	ft_itoa.c\
