@@ -6,7 +6,7 @@
 #    By: fviolin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 17:41:56 by fviolin           #+#    #+#              #
-#    Updated: 2016/02/11 16:40:37 by fviolin          ###   ########.fr        #
+#    Updated: 2016/02/15 12:56:54 by fviolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRCS = ft_atoi.c\
 	ft_lstnew.c\
 	ft_lstmap.c\
 	ft_nbrlen.c\
+	ft_itoa_base.c\
 	ft_swap.c
 	
 OBJS = $(SRCS:.c=.o)
