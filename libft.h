@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:42:05 by fviolin           #+#    #+#             */
-/*   Updated: 2016/02/15 12:56:35 by fviolin          ###   ########.fr       */
+/*   Updated: 2016/03/08 14:30:53 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,5 @@ int					ft_isspace(int c);
 void				ft_reverse(char *s);
 size_t				ft_nbrlen(int n);
 void				ft_swap(int *a, int *b);
+int					ft_tablen(char **tab);
 #endif
