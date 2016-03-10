@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 16:17:35 by fviolin           #+#    #+#             */
-/*   Updated: 2016/02/11 16:21:11 by fviolin          ###   ########.fr       */
+/*   Updated: 2016/03/10 10:44:28 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnjoin(char const *s1, char const *s2, size_t len)
 {
-	size_t 	i;
+	size_t	i;
 	char	*s;
 
 	i = 0;
