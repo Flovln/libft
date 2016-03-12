@@ -6,16 +6,18 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:42:05 by fviolin           #+#    #+#             */
-/*   Updated: 2016/03/08 14:30:53 by fviolin          ###   ########.fr       */
+/*   Updated: 2016/03/12 14:34:35 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 12
 
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <fcntl.h>
 
 typedef struct		s_list
 {
@@ -91,4 +93,5 @@ void				ft_reverse(char *s);
 size_t				ft_nbrlen(int n);
 void				ft_swap(int *a, int *b);
 int					ft_tablen(char **tab);
+int					get_next_line(int const fd, char **line);
 #endif
