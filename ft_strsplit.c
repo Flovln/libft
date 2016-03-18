@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 10:22:31 by fviolin           #+#    #+#             */
-/*   Updated: 2016/01/06 13:47:54 by fviolin          ###   ########.fr       */
+/*   Updated: 2016/03/18 16:54:34 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	word_nb = ft_count(s, c);
-	t = (char **)malloc(sizeof(char *) * (ft_count(s, c)) + 1);
+	t = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
 	if (t == NULL)
 		return (NULL);
 	while (word_nb--)
