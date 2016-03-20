@@ -6,7 +6,7 @@
 /*   By: fviolin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:42:05 by fviolin           #+#    #+#             */
-/*   Updated: 2016/03/18 11:49:21 by fviolin          ###   ########.fr       */
+/*   Updated: 2016/03/20 15:44:26 by fviolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,5 @@ void				ft_swap(int *a, int *b);
 int					ft_tablen(char **tab);
 int					get_next_line(int const fd, char **line);
 char				**ft_strsplit_ws(char const *s);
+void				ft_print_tab(char **tab);
 #endif
